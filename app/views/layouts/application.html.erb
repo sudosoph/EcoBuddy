@@ -2,13 +2,27 @@
 <html>
 <head>
   <title>EcoBuddy</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="wrap">
+
+<%= render :partial => '/layouts/header' %>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <%= yield %>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted credit">&copy; Sophia 2013.</p>
+    </div>
+  </div>
 
 </body>
 </html>
